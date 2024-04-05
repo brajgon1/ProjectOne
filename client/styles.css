@@ -8,32 +8,34 @@ body {
     margin: 2rem auto;
 }
 
+#titlePage {
+    margin-left: 10px;
+}
+
 header {
     border-bottom: 2px solid #3B2C35;
+    border-left: 2px solid #3B2C35;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
 }
 
 nav li {
-    margin-right: 1rem;
+    margin-right: 2rem;
 }
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: #3B2C35;
 }
 
 nav a:hover {
-    color: yellow;
+    color: darkgoldenrod;
     cursor: pointer;
 }
 
@@ -49,7 +51,7 @@ nav a:hover {
     height: 150px;
     width: 200px;
     padding: 10px;
-    margin: 5px;
+    margin: 10px;
     box-shadow: 2px 2px 5px #444241;
     display: flex;
     flex-direction: column;
@@ -63,4 +65,22 @@ nav a:hover {
     cursor: pointer;
     background-color: #2A1F2D;
     color: yellowgreen;
+}
+
+#cart {
+    box-shadow: 2px 2px 5px #444241;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin: 50px;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #59C9A5;
+}
+
+#sign-up {
+    border-top: 2px solid #3B2C35;
 }
