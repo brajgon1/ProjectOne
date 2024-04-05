@@ -1,8 +1,60 @@
 body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: #5B6C5D;
+    color: #5B6C5D;
+    background: #56E39F;
     margin: 1rem;
     padding: 1rem;
     max-width: 600px;
     margin: 2rem auto;
+}
+
+header {
+    border-bottom: 2px solid #3B2C35;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+#shoeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px 25px;
+}
+
+#shoeCard {
+    background-color: #59C9A5;
+    height: 150px;
+    width: 200px;
+    padding: 10px;
+    margin: 5px;
+    border: solid black;
+}
+
+#cartBtn:hover {
+    cursor: pointer;
+    background-color: #2A1F2D;
+    color: yellowgreen;
 }
