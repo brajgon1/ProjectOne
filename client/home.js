@@ -30,3 +30,4 @@ addToCartBtn.forEach((button) => {
     button.addEventListener("click", addToCart)
 })
 
+// look at local storage to store items in cart. Need to look at local storage when crossing the diff tabs
