@@ -23,6 +23,7 @@ header {
 nav ul {
     list-style-type: none;
     display: flex;
+    text-decoration: underline;
 }
 
 nav li {
