@@ -24,6 +24,8 @@ function addToCart() {
     } else {
         cartCounter.textContent = count + " Shoes"
     } 
+    // local storage
+    localStorage.setItem('cartCount', count);
 }
 
 addToCartBtn.forEach((button) => {
@@ -31,3 +33,11 @@ addToCartBtn.forEach((button) => {
 })
 
 // look at local storage to store items in cart. Need to look at local storage when crossing the diff tabs
+
+window.onload = function() {
+      let storedCount = localStorage.getItem('cartCount');
+      if (storedCount) {
+          count = parseInt(storedCount); // Convert to integer
+          cartCounter.textContent = count + (count === 1 ? " Shoe" : " Shoes");
+      }
+  };
