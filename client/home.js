@@ -61,6 +61,7 @@ function getAllShoeData() {
             // create endpoint below
             axios.post("http://localhost:4000/api/cart", shoe)
             .then(res => {
+                spanCount(res.data.cart.length);
                 // function call that sends a parameter called "res.data.cart.length"
             })
         }
@@ -76,7 +77,10 @@ function getAllShoeData() {
   }
 
 //   create function - target the span with ID cart-count that inserts the data that comes from a parameter
-  
+  function spanCount(count) {
+    const cartCount = document.getElementById('cart-count');
+    cartCount.textContent = count;
+  }
   
 
 window.onload = function() {

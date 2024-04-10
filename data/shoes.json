@@ -20,6 +20,27 @@
         "imageURL": "../photos/shoe3.png",
         "alt": "thirdShoe",
         "id": 3
+    },
+    {
+        "name": "Blue Wonder",
+        "price": 89.95,
+        "imageURL": "../photos/shoe4.png",
+        "alt": "fourthShoe",
+        "id": 4
+    },
+    {
+        "name": "Ultra Brown",
+        "price": 89.35,
+        "imageURL": "../photos/shoe5.png",
+        "alt": "fifthShoe",
+        "id": 5
+    },
+    {
+        "name": "The Best",
+        "price": 99.99,
+        "imageURL": "../photos/shoe6.png",
+        "alt": "sixthShoe",
+        "id": 6
     }
     
 ]
