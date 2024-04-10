@@ -1,0 +1,25 @@
+[
+    {
+        "name": "Grey Wonder",
+        "price": 99.95,
+        "imageURL": "../photos/shoe1.png",
+        "alt": "firstShoe",
+        "id": 1
+    },
+
+    {
+        "name": "Shiny White",
+        "price": 95.99,
+        "imageURL": "../photos/shoe2.png",
+        "alt": "secondShoe",
+        "id": 2
+    },
+    {
+        "name": "Classic",
+        "price": 70.95,
+        "imageURL": "../photos/shoe3.png",
+        "alt": "thirdShoe",
+        "id": 3
+    }
+    
+]
