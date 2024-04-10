@@ -36,6 +36,14 @@ addToCartBtn.forEach((button) => {
 })
 
 
+//   create function - target the span with ID cart-count that inserts the data that comes from a parameter
+function spanCount(count) {
+    const cartCount = document.getElementById('cart-count');
+    cartCount.textContent = count;
+    // does this need to be textContent? The way it's added is through text
+  }
+  
+
 function getAllShoeData() {
     axios.get("http://localhost:4000/api/shoes")
     .then(shoes => {
@@ -76,12 +84,7 @@ function getAllShoeData() {
     })
   }
 
-//   create function - target the span with ID cart-count that inserts the data that comes from a parameter
-  function spanCount(count) {
-    const cartCount = document.getElementById('cart-count');
-    cartCount.textContent = count;
-  }
-  
+
 
 window.onload = function() {
       let storedCount = localStorage.getItem('cartCount');
