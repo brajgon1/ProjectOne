@@ -11,5 +11,4 @@ app.post("/api/cart", addToCart)
 app.get("/api/cart", getCartItems) 
 app.delete("/api/shoes/:id", deleteShoe)
 
-
 app.listen(4000, () => console.log("Server running on 4000"));
