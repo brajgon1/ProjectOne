@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>About Stride Savvy Shoes</title>
 </head>
 <body>
     <header id="header">
-        <h1 id="titlePage">Stride Savvy Shoes</h1>
-        <nav>
-         <ul>
-           <li class="nav"><a href="./home.html">Home</a></li>
-           <li class="nav"><a href="./about.html">About</a></li>
-           <li class="nav"><a href="./cart.html">Cart</a></li>
-         </ul>
-       </nav>
-       </header> 
-       <section id="cartList">
-        <p>Your Cart: <span id="cart-count"></span></p>
-      </section>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum consectetur in eligendi, corporis ratione architecto perferendis officia esse numquam quibusdam corrupti deserunt repellendus molestiae, veniam accusamus tempora totam. Veritatis, nam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magnam, nesciunt reiciendis minus eius quisquam animi molestias cum itaque voluptas facilis rerum recusandae dolor ad provident mollitia consequatur. Maiores, nisi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nisi deleniti eligendi odio consequatur dignissimos voluptatibus totam quasi adipisci? Inventore expedita earum temporibus incidunt voluptatem quia error numquam quam iure.</p>
-       <script>
-        window.onload = function() {
-            let storedCount = localStorage.getItem('cartCount');
-            if (storedCount) {
-                count = parseInt(storedCount);
-                cartCounter.textContent = count + (count === 1 ? " Shoe" : " Shoes");
-            }
-        };
+    <h1 id="titlePage">Stride Savvy Shoes</h1>
+    <nav>
+        <ul>
+        <li class="nav"><a href="./home.html">Home</a></li>
+        <li class="nav"><a href="./about.html">About</a></li>
+        <li class="nav"><a href="./cart.html">Cart</a></li>
+        </ul>
+    </nav>
+    </header>
+    <section id="cartList">
+    <p>Your Cart: <span id="cart-count"></span></p>
+    </section>
+    <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum consectetur
+    in eligendi, corporis ratione architecto perferendis officia esse numquam
+    quibusdam corrupti deserunt repellendus molestiae, veniam accusamus
+    tempora totam. Veritatis, nam! Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Eveniet magnam, nesciunt reiciendis minus eius quisquam
+    animi molestias cum itaque voluptas facilis rerum recusandae dolor ad
+    provident mollitia consequatur. Maiores, nisi! Lorem ipsum dolor sit amet
+    consectetur adipisicing elit. Eaque nisi deleniti eligendi odio
+    consequatur dignissimos voluptatibus totam quasi adipisci? Inventore
+    expedita earum temporibus incidunt voluptatem quia error numquam quam
+    iure.
+    </p>
+    <script>
+    window.onload = function () {
+        let storedCount = localStorage.getItem("cartCount");
+        if (storedCount) {
+        count = parseInt(storedCount);
+        cartCounter.textContent = count + (count === 1 ? " Shoe" : " Shoes");
+        }
+    };
     </script>
-       <script src="home.js"></script>
+    <script src="home.js"></script>
 </body>
 </html>

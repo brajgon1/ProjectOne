@@ -68,6 +68,11 @@ nav a:hover {
     object-fit: contain;
 }
 
+.cartBtn {
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
 .cartBtn:hover {
     cursor: pointer;
     background-color: #2A1F2D;

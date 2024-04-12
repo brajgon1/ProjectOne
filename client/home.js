@@ -2,97 +2,75 @@
 let signUp = document.getElementById("sign-up");
 let input = document.querySelector("input");
 let footer = document.querySelector("footer");
-let emailButton = document.getElementById("emailBtn"); 
+let emailButton = document.getElementById("emailBtn");
 let deleteThing = document.getElementById("signupbtnstuff");
 let addToCartBtn = document.querySelectorAll(".cartBtn");
 let cartCounter = document.getElementById("cart-count");
 let count = 0;
-console.log(addToCartBtn.length)
+const cartCount = document.getElementById("cart-count");
+
+console.log(addToCartBtn.length);
 let shoeData = [];
-const container = document.getElementById('shoeContainer');
+const container = document.getElementById("shoeContainer");
 console.log(container);
 
 function emailSignUp() {
-    let text = document.createElement("h3");
-    text.textContent = "Thank you for signing up " + input.value + " !";
-    footer.appendChild(text);
-    deleteThing.remove();
+  let text = document.createElement("h3");
+  text.textContent = "Thank you for signing up " + input.value + " !";
+  footer.appendChild(text);
+  deleteThing.remove();
 }
-emailButton.addEventListener("click", emailSignUp); 
+emailButton.addEventListener("click", emailSignUp);
 
-function addToCart() {
-    count += 1;
-    if (count === 1) {
-        cartCounter.textContent = count + " Shoe"
-    } else {
-        cartCounter.textContent = count + " Shoes"
-    } 
-
-    localStorage.setItem('cartCount', count);
+function setCount(count) {
+  cartCount.innerHTML = count;
+	localStorage.setItem("cartCount", count);
 }
-   
-addToCartBtn.forEach((button) => {
-    button.addEventListener("click", addToCart)
-})
 
-
-//   create function - target the span with ID cart-count that inserts the data that comes from a parameter
-function spanCount(count) {
-    const cartCount = document.getElementById('cart-count');
-    cartCount.textContent = count;
-    // does this need to be textContent? The way it's added is through text
-  }
-  
+function getCount() {
+		let storedCount = localStorage.getItem("cartCount");
+		if (storedCount) {
+			count = parseInt(storedCount);
+			setCount(count);
+		}
+}
 
 function getAllShoeData() {
-    axios.get("http://localhost:4000/api/shoes")
-    .then(shoes => {
-      displayShoeData(shoes.data);
-    })
-  }
+  axios.get("http://localhost:4000/api/shoes").then((shoes) => {
+    displayShoeData(shoes.data);
+  });
+}
 
-  function displayShoeData(shoeData) {
-    const shoeCards = shoeData.map(shoe => {
-        console.log(shoeData)
-        let shoeCard = document.createElement('div');
-        shoeCard.className = "shoeCard";
-        let name = document.createElement('h3');
-        name.className = "name";
-        name.innerHTML = shoe.name
-        let price = document.createElement('h3');
-        price.innerHTML = shoe.price
-        price.className = "price";
-        let button = document.createElement('button');
-        button.innerHTML = "Add to Cart"
-        button.className = "cartBtn";
-        button.onclick = function () {
-            // create endpoint below
-            axios.post("http://localhost:4000/api/cart", shoe)
-            .then(res => {
-                spanCount(res.data.cart.length);
-                // function call that sends a parameter called "res.data.cart.length"
-            })
-        }
-        let image = document.createElement('img');
-        image.src = shoe.imageURL;
-        image.alt = shoe.alt;
-        shoeCard.appendChild(image);
-        shoeCard.appendChild(name);
-        shoeCard.appendChild(price);
-        shoeCard.appendChild(button);
-        container.appendChild(shoeCard)
-    })
-  }
+function displayShoeData(shoeData) {
+  shoeData.map((shoe) => {
+    let shoeCard = document.createElement("div");
+    shoeCard.className = "shoeCard";
+    let name = document.createElement("h3");
+    name.className = "name";
+    name.innerHTML = shoe.name;
+    let price = document.createElement("h3");
+    price.innerHTML = shoe.price;
+    price.className = "price";
+    let button = document.createElement("button");
+    button.innerHTML = "Add to Cart";
+    button.className = "cartBtn";
+    button.onclick = function () {
+      // create endpoint below
+      axios.post("http://localhost:4000/api/cart", shoe).then((res) => {
+        setCount(res.data.length);
+        // function call that sends a parameter called "res.data.cart.length"
+      });
+    };
+    let image = document.createElement("img");
+    image.src = shoe.imageURL;
+    image.alt = shoe.alt;
+    shoeCard.appendChild(image);
+    shoeCard.appendChild(name);
+    shoeCard.appendChild(price);
+    shoeCard.appendChild(button);
+    container.appendChild(shoeCard);
+  });
+}
 
-
-
-window.onload = function() {
-      let storedCount = localStorage.getItem('cartCount');
-      if (storedCount) {
-          count = parseInt(storedCount); // Convert to integer
-          cartCounter.textContent = count + (count === 1 ? " Shoe" : " Shoes");
-      }
-
-      getAllShoeData();
-
-  };
+getAllShoeData();
+getCount()
