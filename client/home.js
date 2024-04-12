@@ -8,8 +8,6 @@ let addToCartBtn = document.querySelectorAll(".cartBtn");
 let cartCounter = document.getElementById("cart-count");
 let count = 0;
 const cartCount = document.getElementById("cart-count");
-
-console.log(addToCartBtn.length);
 let shoeData = [];
 const container = document.getElementById("shoeContainer");
 console.log(container);
@@ -55,10 +53,8 @@ function displayShoeData(shoeData) {
     button.innerHTML = "Add to Cart";
     button.className = "cartBtn";
     button.onclick = function () {
-      // create endpoint below
       axios.post("http://localhost:4000/api/cart", shoe).then((res) => {
         setCount(res.data.length);
-        // function call that sends a parameter called "res.data.cart.length"
       });
     };
     let image = document.createElement("img");
