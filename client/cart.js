@@ -26,7 +26,8 @@ function displayShoeData(shoeData) {
     button.innerHTML = "Delete";
     button.className = "cartBtn";
     button.onclick = function () {
-    deleteShoe(shoe.id);
+    // deleteShoe(shoe.id);
+    shoeCard.remove();
     };
     let image = document.createElement("img");
     image.src = shoe.imageURL;

@@ -104,3 +104,16 @@ nav a:hover {
     justify-content: center;
     color: white;
 }
+
+#checkOut {
+    display: flex;
+    align-items: center;
+    margin-left: 260px;
+    border-radius: 10px;
+}
+
+#checkOut:hover {
+    cursor: pointer;
+    background-color: #2A1F2D;
+    color: yellowgreen;
+}
