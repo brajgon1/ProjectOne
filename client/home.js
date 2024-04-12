@@ -6,6 +6,7 @@ let emailButton = document.getElementById("emailBtn");
 let deleteThing = document.getElementById("signupbtnstuff");
 let addToCartBtn = document.querySelectorAll(".cartBtn");
 let cartCounter = document.getElementById("cart-count");
+let checkout = document.getElementById("checkOut");
 let count = 0;
 const cartCount = document.getElementById("cart-count");
 let shoeData = [];
@@ -66,7 +67,17 @@ function displayShoeData(shoeData) {
     shoeCard.appendChild(button);
     container.appendChild(shoeCard);
   });
+};
+
+
+// work to create a way to click checkout and have it delete the cart and return a message saying thank you for your purchase //
+function checkoutSubmitBtn() {
+  let text = document.createElement("h3");
+  text.textContent = "Thank you for your purchase!";
+  footer.appendChild(text);
+  // deleteThing.remove();
 }
+// checkOut.addEventListener("click", checkoutSubmitBtn);
 
 getAllShoeData();
 getCount()
