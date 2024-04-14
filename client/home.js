@@ -70,5 +70,6 @@ function displayShoeData(shoeData) {
 };
 
 
+
 getAllShoeData();
 getCount()
