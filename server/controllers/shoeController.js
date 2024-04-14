@@ -23,5 +23,10 @@ module.exports = {
         if (index !== -1) {
             shoes.splice(index, 1);
             res.status(200).send(shoes);
-        }}
-    }   
+        }},
+
+    deleteCart: (req, res) => {
+        cart = [];
+        res.status(200).send(cart);
+    }  
+}

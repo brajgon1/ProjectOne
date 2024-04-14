@@ -1,4 +1,5 @@
 const container = document.getElementById("shoeContainer");
+const checkoutBtn = document.getElementById("checkOut");
 
 axios.get("http://localhost:4000/api/cart").then((res) => {
 console.log(res.data);
@@ -6,11 +7,20 @@ displayShoeData(res.data);
 });
 
 function deleteShoe(id) {
-    axios.delete(`http://localhost:4000/api/shoes/${id}`).then((res) => {
+    axios.delete(`http://localhost:4000/api/shoes/${id}`)
+    .then((res) => {
         console.log(res.data);
         getAllShoeData();
     });
 }
+
+checkoutBtn.addEventListener("click", () => {
+  axios.delete("http://localhost:4000/api/cart")
+  .then((res) => {
+    const shoeContainer = document.getElementById("shoeContainer");
+    shoeContainer.innerHTML = "Thank you for your purchase! See you next time!";
+  })
+});
 
 function displayShoeData(shoeData) {
   shoeData.map((shoe) => {
