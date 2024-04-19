@@ -22,15 +22,15 @@ emailButton.addEventListener("click", emailSignUp);
 
 function setCount(count) {
   cartCount.innerHTML = count;
-	localStorage.setItem("cartCount", count);
+  localStorage.setItem("cartCount", count);
 }
 
 function getCount() {
-		let storedCount = localStorage.getItem("cartCount");
-		if (storedCount) {
-			count = parseInt(storedCount);
-			setCount(count);
-		}
+  let storedCount = localStorage.getItem("cartCount");
+  if (storedCount) {
+    count = parseInt(storedCount);
+    setCount(count);
+  }
 }
 
 function getAllShoeData() {
@@ -67,7 +67,17 @@ function displayShoeData(shoeData) {
     shoeCard.appendChild(button);
     container.appendChild(shoeCard);
   });
-};
+}
+
+// function getLarger() {
+//   document.querySelectorAll("shoeImage").forEach((image) => {
+//     image.addEventListener("click", () => {
+//       image.classList.toggle("enlarge");
+//       document.body.classList.toggle("dimmedBackground");
+//     });
+//   });
+// };
 
 getAllShoeData();
-getCount()
+getCount();
+// getLarger();
