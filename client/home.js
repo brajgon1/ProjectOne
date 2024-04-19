@@ -15,7 +15,7 @@ console.log(container);
 
 function emailSignUp() {
   let text = document.createElement("h3");
-  text.textContent = "Thank you for signing up " + input.value + " !";
+  text.textContent = " Thank you for signing up " + input.value + " !";
   footer.appendChild(text);
   deleteThing.remove();
 }
