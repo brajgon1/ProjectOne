@@ -1,4 +1,3 @@
-// first function emailSignUp
 let signUp = document.getElementById("sign-up");
 let input = document.querySelector("input");
 let footer = document.querySelector("footer");
@@ -59,6 +58,7 @@ function displayShoeData(shoeData) {
       });
     };
     let image = document.createElement("img");
+    image.className = "shoeImage";
     image.src = shoe.imageURL;
     image.alt = shoe.alt;
     shoeCard.appendChild(image);
@@ -68,8 +68,6 @@ function displayShoeData(shoeData) {
     container.appendChild(shoeCard);
   });
 };
-
-
 
 getAllShoeData();
 getCount()

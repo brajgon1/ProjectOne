@@ -1,7 +1,7 @@
 body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #5B6C5D;
-    background: whitesmoke;
+    background-color: lightblue;
     margin: 1rem;
     padding: 1rem;
     max-width: 1000px;
@@ -45,7 +45,6 @@ nav a:hover {
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 10px 25px;
-    border-bottom: 2px solid #3B2C35;
 }
 
 .shoeCard {
@@ -60,6 +59,10 @@ nav a:hover {
     align-items: center;
     border-radius: 20px;
     min-width: 10%;
+}
+
+.shoeImage:hover {
+    transform: scale(1.1);
 }
 
 .shoeCard img {
@@ -94,12 +97,9 @@ nav a:hover {
 }
 
 #sign-up {
-    position: fixed;
     margin-left: 50px;
-    width: 900px;
+    margin-bottom: 10px;
     background-color: #5B6C5D;
-    /* display: flex;
-    justify-content: center; */
 }
 
 #cartList {
@@ -113,7 +113,7 @@ nav a:hover {
 #checkOut {
     display: flex;
     align-items: center;
-    margin-left: 260px;
+    float: right;
     border-radius: 10px;
 }
 
@@ -125,6 +125,8 @@ nav a:hover {
 
 #para {
     color: whitesmoke;
+    padding: 10px;
+    margin-top: 10px;
     margin-left: 10px;
 }
 
@@ -136,3 +138,28 @@ h3 {
     margin-left: 10px;
     margin-bottom: 5px;
 }
+
+#text {
+    text-indent: 20px;
+}
+
+#shopEssentials {
+    height: 100px;
+    width: 60vw;
+    margin: 10px auto; 
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #59C9A5; 
+    box-shadow: 2px 2px 5px #444241;
+}
+
+.shop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    font-size: 35px;
+    color: rgba(99, 100, 31, 0.945);
+}
+
