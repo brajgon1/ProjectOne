@@ -9,6 +9,7 @@ let checkout = document.getElementById("checkOut");
 let count = 0;
 let cartCount = document.getElementById("cart-count");
 let shoeData = [];
+let image = document.querySelector("image");
 const container = document.getElementById("shoeContainer");
 console.log(container);
 
@@ -69,15 +70,15 @@ function displayShoeData(shoeData) {
   });
 }
 
-// function getLarger() {
-//   document.querySelectorAll("shoeImage").forEach((image) => {
-//     image.addEventListener("click", () => {
-//       image.classList.toggle("enlarge");
-//       document.body.classList.toggle("dimmedBackground");
-//     });
-//   });
-// };
+function getLarger() {
+  document.querySelectorAll("shoeImage").forEach((image) => {
+    image.addEventListener("click", () => {
+      image.classList.toggle("enlarge");
+      document.classList.toggle("dimmedBackground");
+    });
+  });
+}
 
 getAllShoeData();
 getCount();
-// getLarger();
+getLarger();

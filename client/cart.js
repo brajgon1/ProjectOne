@@ -9,7 +9,6 @@ axios.get("http://localhost:4000/api/cart").then((res) => {
 function deleteShoe(id) {
   axios.delete(`http://localhost:4000/api/shoes/${id}`).then((res) => {
     console.log(res.data);
-    getAllShoeData();
   });
 }
 
