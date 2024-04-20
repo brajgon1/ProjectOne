@@ -60,6 +60,7 @@ function displayShoeData(shoeData) {
     };
     let image = document.createElement("img");
     image.className = "shoeImage";
+    image.addEventListener("click", () => getLarger(shoe.imageURL));
     image.src = shoe.imageURL;
     image.alt = shoe.alt;
     shoeCard.appendChild(image);
@@ -70,15 +71,12 @@ function displayShoeData(shoeData) {
   });
 }
 
-function getLarger() {
-  document.querySelectorAll("shoeImage").forEach((image) => {
-    image.addEventListener("click", () => {
-      image.classList.toggle("enlarge");
-      document.classList.toggle("dimmedBackground");
-    });
-  });
+
+
+function getLarger(imageURL) {
+  
+
 }
 
 getAllShoeData();
 getCount();
-getLarger();

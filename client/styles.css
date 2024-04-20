@@ -2,9 +2,9 @@ body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #5B6C5D;
     background-color: lightblue;
-    margin: 1rem;
-    padding: 1rem;
-    max-width: 1000px;
+    margin: 0;
+    padding: 0;
+    max-width: 900px;
     margin: 2rem auto;
 }
 
@@ -149,8 +149,8 @@ h3 {
 }
 
 #shopEssentials {
-    height: 100px;
-    width: 60vw;
+    height: 130px;
+    max-width: 60vw;
     margin: 10px auto; 
     margin-top: 10px;
     border-radius: 10px;
@@ -163,7 +163,7 @@ h3 {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 30px;
+    padding: 40px;
     font-size: 35px;
     color: rgba(99, 100, 31, 0.945);
 }
