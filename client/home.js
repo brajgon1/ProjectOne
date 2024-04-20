@@ -71,8 +71,6 @@ function displayShoeData(shoeData) {
   });
 }
 
-
-
 function getLarger(imageURL) {
   const myModal = document.getElementById("myModal");
   const modalImage = document.getElementById('modalImg')
