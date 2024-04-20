@@ -74,8 +74,18 @@ function displayShoeData(shoeData) {
 
 
 function getLarger(imageURL) {
-  
+  const myModal = document.getElementById("myModal");
+  const modalImage = document.getElementById('modalImg')
+  myModal.style.display = "block";
+  modalImage.src = imageURL;
+  console.log(modalImg)
+}
 
+const closeBtn = document.getElementById("close");
+closeBtn.addEventListener("click", x);
+function x() {  
+  const myModal = document.getElementById("myModal");
+  myModal.style.display = "none";
 }
 
 getAllShoeData();
