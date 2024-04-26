@@ -1,7 +1,7 @@
-const shoesData = require('../../data/shoes.json');
+const shoeData = require('../../data/shoes.json');
 
 let cart = [];
-let shoes = [...shoesData];
+let shoes = [...shoeData];
 module.exports = {
 
     getAllShoeData: (req, res) => {
