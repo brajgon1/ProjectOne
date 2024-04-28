@@ -2,16 +2,15 @@
 In this basic E-commerce site you can add shoes to a cart, which will display on the "Cart" tab as well as increment at the top of the page.
 You can also swap between the tabs "Home" and "About" after adding to the cart and the number you added in the cart will remain the same.
 When your cursor goes over the images they enlarge a bit, but when clicked on they get even larger, dimming the background.
-There is an Email signup where you can input your Email. This will delete the sign up input and replace it with a message
-You can "purchase" the shoes by clicking the "checkout" button in the cart tab. This deletes the container holding the shoes, which is replaced with a message
+There is an Email signup where you can input your Email. This will delete the sign up input and replace it with a message.
+You can "purchase" the shoes by clicking the "checkout" button in the cart tab. This deletes the container holding the shoes, which is replaced with a message.
 
 # FRONT END
 Site responsive, includes styling
 
 # SERVER
-GET, POST and DELETE requests used
-Express, Axios and Cors utlized 
-Controller file
+GET, POST and DELETE requests used.
+Express, Axios and Cors utilized. Also includes a Controller file. No database was used, but a JSON file was created for the data of the different shoes.
 
 # Languages
 HTML, CSS, JavaScript
