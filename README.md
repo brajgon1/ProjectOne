@@ -19,7 +19,7 @@ HTML, CSS, JavaScript
 # HIGHLIGHTED CODE
 The below code was used to create the "shoe cards" in JavaScript rather than using it in HTML
 ///
-function displayShoeData(shoeData) {
+`function displayShoeData(shoeData) {
   shoeData.map((shoe) => {
     let shoeCard = document.createElement("div");
     shoeCard.className = "shoeCard";
@@ -48,22 +48,22 @@ function displayShoeData(shoeData) {
     shoeCard.appendChild(button);
     container.appendChild(shoeCard);
   });
-}
+}`
 ///
 
 Here is an example of the DELETE request used to "purchase" the shoes
 ///
-checkoutBtn.addEventListener("click", () => {
+`checkoutBtn.addEventListener("click", () => {
   axios.delete("http://localhost:4000/api/cart").then((res) => {
     const shoeContainer = document.getElementById("shoeContainer");
     shoeContainer.innerHTML = "Thank you for your purchase! See you next time!";
   });
-});
+});`
 ///
 
 Here is how I was able to get the cart count to stay the same from swapping between the Home and About tabs
 ///
-function setCount(count) {
+`function setCount(count) {
   cartCount.innerHTML = count;
   localStorage.setItem("cartCount", count);
 }
@@ -74,5 +74,5 @@ function getCount() {
     count = parseInt(storedCount);
     setCount(count);
   }
-}
+}`
 ///
