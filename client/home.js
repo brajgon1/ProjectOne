@@ -11,7 +11,7 @@ let cartCount = document.getElementById("cart-count");
 let shoeData = [];
 let image = document.querySelector("image");
 const container = document.getElementById("shoeContainer");
-console.log(container);
+
 
 function emailSignUp() {
   let text = document.createElement("h3");
